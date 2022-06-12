@@ -23,15 +23,15 @@ const initTimerStart = process.hrtime();
 const intents = config.intents.map((intent) => GatewayIntentBits[titleCase(intent)]);
 const client = new Client({
   intents: intents,
-  presence: {
-    status: 'online',
-    activities: [
-      {
-        name: '/leaderboard',
-        type: ActivityType.Listening
-      }
-    ]
-  }
+  // presence: {
+  //   status: 'online',
+  //   activities: [
+  //     {
+  //       name: '/leaderboard',
+  //       type: ActivityType.Listening
+  //     }
+  //   ]
+  // }
 });
 
 // Destructuring from env
